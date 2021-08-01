@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5567cc</color>
+    <color name="colorPrimaryDark">#5664c1</color>
+    <color name="colorAccent">#e93726</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="colorBlack">#100e0e</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorStart">#cb5ed9</color>
+    <color name="colorEnd">#8463d4</color>
+    <color name="menu_background">#444153</color>
+    <color name="whilte">#ffffff</color>
+
+</resources>

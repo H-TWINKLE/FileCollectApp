@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HF</string>
+
+    <string name="dummy_button">跳过</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="time">跳过 \t\t\t\t %1$d秒</string>
+
+
+    <string name="film">电影</string>
+    <string name="tv">电视剧</string>
+
+    <string name="main_title">移动影视</string>
+    <string name="menu">菜单</string>
+
+    <string name="rvw_title">名字</string>
+    <string name="rvw_info">相关信息值得一看</string>
+    <string name="load">正在加载···</string>
+
+    <string name="tag">类型</string>
+</resources>
