@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
     private HeaderAndFooterWrapper mHeaderAndFooterWrapper;
     private LoadMoreWrapper mLoadMoreWrapper;
     private FastScroller fastScroller;
-    private List<DbModel> list;
+    private List<DbModel> list = new ArrayList<>();
     private CommonAdapter mAdapter;
     private List<String> lists = new ArrayList<>();
     private String url_xpath = "http://www.85105052.com/admin.php?url=";
@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
                         Intent intent = new Intent(MainActivity.this, WebActivity.class);
                         intent.putExtra("url", url);
                         startActivity(intent);*/
-                        new Spider().iface2(MainActivity.this,list.get(position-2).getString("href_url"));
+                        new Spider().iface2(MainActivity.this, list.get(position - 2).getString("href_url"));
                     }
 
 
@@ -320,11 +320,13 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
         try {
             lists.clear();
             db = x.getDb(myApp.daoConfig);
-            list = db.findDbModelAll(new SqlInfo("select * from " + str));
+            List<DbModel> tempList = db.findDbModelAll(new SqlInfo("select * from " + str));
+            if (tempList != null) {
+                list.addAll(tempList);
+            }
             for (int y = 0; y < 4; y++) {
                 lists.add(list.get(y).getString("href_img"));
             }
-
             db.close();
         } catch (Exception e) {
             e.printStackTrace();
